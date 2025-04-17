@@ -1,0 +1,20 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import MdPostLayout from "../../layouts/MdPostLayout.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("blog");
+    return posts.map((post: any) => {
+        const customSlug = post.data.slug ?? post.id.replace(/^\d+/, "");
+        return {
+            params: {slug: customSlug }, props: { post }
+        }
+    });
+}
+
+const { post } = Astro.props as { post: CollectionEntry<"blog"> };
+const { Content } = await render(post);
+---
+<MdPostLayout frontmatter={post.data}>
+    <Content />
+</MdPostLayout>
