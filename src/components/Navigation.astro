@@ -1,0 +1,28 @@
+---
+import "./Navigation.css"
+
+const {pathname} = Astro.url;
+
+type NavLink = {
+    name: string;
+    href: string;
+}
+
+const navLinks : NavLink[] = [
+    { name: "Home", href: "/"},
+    { name: "Blog", href: "/blog"},
+    { name: "About", href: "/about"},
+    { name: "Tags", href: "/tags"}
+]
+
+const isActive = (href: string) => href === "/" ? pathname === "/" : pathname.startsWith(href)
+---
+
+<div class="nav-links">
+    <ul class="nav">
+        {navLinks.map(({ name, href}) => 
+        <a href={href} class={isActive(href) ? "active": ""}>
+            {name}
+        </a>)}
+    </ul>
+</div>

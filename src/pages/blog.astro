@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import type { PostFrontmatter } from "../types/Post"
+const allPosts = Object.values(import.meta.glob<{ frontmatter: PostFrontmatter; url: string }>("./posts/*.md", { eager: true}))
+const pageTitle = "Blog";
+
+
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <p>This is where I will post about my journey learning Astro.</p>
+    <ul>
+{allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+</ul>
+</BaseLayout>

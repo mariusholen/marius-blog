@@ -45,3 +45,11 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+client:load – loads as soon as the page loads
+
+client:idle – waits until browser is idle
+
+client:visible – loads when scrolled into view
+
+client:only="react" – only runs on client, not SSR (for full apps)
