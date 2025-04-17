@@ -1,0 +1,34 @@
+.theme-toggle-icon {
+	cursor: pointer;
+	color: var(--color-text-main);
+	transition: transform 0.3s ease;
+	align-self: center;
+	width: 40px;
+	height: 36px;
+	flex-shrink: 0;
+}
+
+.theme-toggle-icon:focus {
+	outline: 2px solid var(--color-border);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.theme-toggle-icon:hover {
+	transform: scale(0.95);
+}
+
+.lightmode,
+.darkmode {
+	display: none;
+	transition: opacity 0.3s ease;
+	color: #ffcc00;
+}
+
+:root:not(.dark) .lightmode {
+	display: block;
+}
+
+:root.dark .darkmode {
+	display: block;
+}

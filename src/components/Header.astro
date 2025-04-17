@@ -1,10 +1,16 @@
 ---
-import { Hamburger } from "./Hamburger";
+import "./Header.css"
 import Navigation from "./Navigation.astro";
+import { ThemeIcon } from "./ThemeIcon";
 ---
-<header>
-    <nav>
-        <Hamburger />
+<header class="header-container">
+    <nav class="nav-container">
+        <a class="nav-title" href="/">
+        <h1 class="nav-title-text">
+            Marius Holen
+        </h1>
+    </a>
         <Navigation />
+        <ThemeIcon client:load />
     </nav>
 </header>

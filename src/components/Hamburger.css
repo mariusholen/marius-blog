@@ -1,12 +1,30 @@
-.hamburger {
-	padding-right: 20px;
+.hamburger-container {
+	padding: 1em;
 	cursor: pointer;
 }
 
-.hamburger .line {
-	display: block;
-	width: 40px;
-	height: 5px;
-	margin-bottom: 10px;
-	background-color: #ff9776;
+.hamburger {
+	display: flex;
+	padding: 0.1em 0.3em;
+	cursor: pointer;
+	border-radius: 8px;
+	border: 1px solid transparent;
+}
+
+.hamburger:hover {
+	border-color: #646cff;
+}
+
+.hamburger:focus,
+.hamburger:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+.hamburger-icon {
+	transition: all 0.3s 2s ease-in-out;
+}
+
+.hamburger svg {
+	fill: currentColor;
+	stroke: #333;
 }

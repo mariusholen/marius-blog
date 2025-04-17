@@ -21,8 +21,10 @@ const isActive = (href: string) => href === "/" ? pathname === "/" : pathname.st
 <div class="nav-links">
     <ul class="nav">
         {navLinks.map(({ name, href}) => 
-        <a href={href} class={isActive(href) ? "active": ""}>
+        <li>
+            <a href={href} class={isActive(href) ? "active": ""}>
             {name}
-        </a>)}
+            </a>
+        </li>)}
     </ul>
 </div>
