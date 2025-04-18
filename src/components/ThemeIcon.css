@@ -14,21 +14,17 @@
 	border-radius: 4px;
 }
 
-.theme-toggle-icon:hover {
-	transform: scale(0.95);
-}
-
 .lightmode,
 .darkmode {
 	display: none;
 	transition: opacity 0.3s ease;
-	color: #ffcc00;
+	color: var(--color-text-header);
 }
 
-:root:not(.dark) .lightmode {
+:root:not(.dark) .darkmode {
 	display: block;
 }
 
-:root.dark .darkmode {
+:root.dark .lightmode {
 	display: block;
 }

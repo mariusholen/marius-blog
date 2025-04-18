@@ -1,0 +1,34 @@
+---
+import "./BlogCard.css"
+type BlogCardProps = {
+    title: string;
+    description: string;
+    pubDate: Date;
+    slug: string;
+    tags: string[];
+}
+
+const { title, description, pubDate, slug, tags } = Astro.props as BlogCardProps;
+---
+
+<li class="blog-card">
+    <article>
+        <a href={`/blog/${slug}`}>
+            <h1 class="blog-card-title">{title}</h1>
+            <p class="blog-card-description">{description}</p>
+        </a>
+        <div class="blog-card-footer">
+        <time>{pubDate?.toLocaleDateString("en-GB",  {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          })}
+        </time>
+        <div class="tags-list">
+            {tags?.map((tag: string) => (
+                <a class="tag" href={`/tags/${tag}`}>{tag}</a>
+            ))}
+        </div>
+        </div>
+    </article>
+</li>

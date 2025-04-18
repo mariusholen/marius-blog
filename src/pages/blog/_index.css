@@ -1,0 +1,8 @@
+.blog-card-list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	align-items: center;
+	padding: 0; /*Resets ul defaults*/
+	gap: 1em;
+}

@@ -4,10 +4,7 @@ pubDate: 2025-04-17
 slug: "first-blog-post"
 description: "Kicking off a new blog focused on my journey with React, .NET, and the tools I explore along the way."
 author: "Marius Holen"
-image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public", "react", "dotnet"]
+tags: ["astro"]
 ---
 
 Welcome to my new developer blog!

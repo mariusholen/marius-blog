@@ -1,12 +1,9 @@
 ---
 title: "Building a Responsive, Accessible Header with Dark Mode Toggle"
-pubDate: 2025-04-17
+pubDate: 2025-04-18
 slug: "base-layout-styling"
 description: "A breakdown of how I implemented a compact, responsive, and accessible header in Astro — complete with a dark mode toggle and semantic layout."
 author: "Marius Holen"
-image:
-  url: "/images/layout-preview.png"
-  alt: "Screenshot of the blog layout with header and footer"
 tags: ["layout", "styling", "astro", "react", "components"]
 ---
 

@@ -11,14 +11,17 @@
 	padding: 0; /*Resets ul defaults*/
 }
 
+.nav-links a.active {
+	text-decoration: underline;
+}
+
 .nav-links a {
 	display: block;
 	text-align: center;
 	padding: 10px 0;
-	color: var(--color-heading);
+	color: var(--color-text-header);
 	text-decoration: none;
-	font-size: 1.8em;
-	font-weight: bold;
+	font-size: 1.5em;
 	text-transform: capitalize;
 }
 
@@ -26,8 +29,4 @@
 	outline: 2px solid var(--color-border);
 	outline-offset: 2px;
 	border-radius: 4px;
-}
-
-.nav-links a:hover {
-	transform: scale(0.95);
 }

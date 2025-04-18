@@ -1,14 +1,17 @@
 ---
+import "./_index.css"
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogCard from "../../components/BlogCard.astro";
 
 const allPosts = await getCollection("blog")
-const pageTitle = "Blog";
+const pageTitle = "Blog posts";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-{allPosts.map((post: any) => <li><a href={`/blog/${post.data.slug}/`}>{post.data.title}</a></li>)}
+<ul class="blog-card-list">
+    {allPosts.map((post: any) => 
+        <BlogCard title={post.data.title} description={post.data.description} pubDate={post.data.pubDate} slug={post.data.slug} tags={post.data.tags} />
+    )}
 </ul>
 </BaseLayout>
